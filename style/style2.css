@@ -1,0 +1,108 @@
+body {
+    
+    background-color: #000000;
+
+    
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  
+        url('../background2.PNG');  
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat;
+
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #a0d8ff;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #a0d8ff;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 1em;
+    color: #a0d8ff;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo-paragraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+
+.photo {
+    width: 70vw;
+    max-width: 550px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border-radius: 20px;
+
+    clip-path: polygon(
+        30% 0%,
+        70% 0%,
+        100% 30%,
+        100% 70%,
+        70% 100%,
+        30% 100%,
+        0% 70%,
+        0% 30%
+    );
+
+    box-shadow: 0 0 15px rgba(160, 216, 255, 0.4);
+}
+
+p {
+    background-color: rgba(160, 216, 255, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 700px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+ul.toy-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+footer {
+    text-align: left;
+    font-size: small;
+    margin-top: 20px;
+    color: #a0d8ff;
+}
+
+
+@media (max-width: 900px) {
+    .photo {
+        width: 80vw;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 1.5em; }
+    h2, h3 { font-size: 1.2em; }
+    p { font-size: 1em; }
+    .photo {
+        width: 90vw;
+        max-width: none;
+    }
+}
