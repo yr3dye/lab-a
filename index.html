@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="snow-layer"></div>
+
+    <div class="container">
+        <div class="app-header">
+            <h1 class="arched-title">==HUMAN WEATHER==</h1>
+        </div>
+
+        <div class="search-container">
+            <form class="search-form">
+                <div class="input-wrapper">
+                    <label for="locationInput">Location</label>
+                    <input type="text" id="locationInput" placeholder="Odesa, Ukraine">
+                    <div id="error-display" class="hidden"></div>
+                </div>
+                <button id="checkButton" type="submit">Check Weather</button>
+            </form>
+        </div>
+
+        <div id="weather-display"></div>
+    </div>
+</body>
+</html>

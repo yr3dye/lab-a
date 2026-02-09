@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+body {
+    background: black;
+    color: gold;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: #0b0b0b;
+    border: 3px solid red;
+    box-shadow: 0 0 25px gold;
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.app-header {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.arched-title {
+    font-family: Papyrus, fantasy;
+    font-size: 42px;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transform: perspective(500px) rotateX(20deg);
+    letter-spacing: 4px;
+}
+
+.search-container {
+    padding: 20px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-wrapper {
+    padding: 4px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, violet);
+}
+
+.input-wrapper label {
+    color: white;
+    font-weight: bold;
+    padding-left: 6px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: black;
+    color: white;
+}
+
+.input-wrapper input:focus {
+    outline: none;
+}
+
+#checkButton {
+    background: linear-gradient(135deg, darkred, red, gold);
+    border: 2px solid gold;
+    color: black;
+    font-size: 18px;
+    padding: 14px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#weather-display {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.weather-block {
+    background: black;
+    border: 2px solid red;
+    box-shadow: 0 0 15px gold;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.weather-block * {
+    color: white;
+}
+
+.weather-icon img {
+    width: 90px;
+}
+
+.weather-temp {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.weather-desc {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.weather-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.stat-item {
+    background: #111;
+    border: 1px solid gold;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#error-display {
+    color: white;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.snow-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.snow-layer span {
+    position: absolute;
+    top: -20px;
+    color: white;
+    font-size: 14px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
